@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>GitHub Api using Angular JS</title>
+    <script src="js/angular.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="searchUser.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="MainCtrl">
+    <h1>GitHub Viewer</h1>
+    <!-- search form for github users -->
+    <form ng-submit="search(username)">
+      <input type="search" ng-model="username">
+      <input type="submit" value="Submit">
+    </form>
+    <!-- details of searched github users -->
+    <div>
+      {{error}}
+    </div>
+    <div>
+      {{user.name}}
+    </div>
+    <div>
+      {{user.location}}
+    </div>
+    <div>
+      <img ng-src="{{user.avatar_url}}" alt="{{user.name}}">
+    </div>
+    <!-- ends details of searched github users -->
+  </body>
+</html>

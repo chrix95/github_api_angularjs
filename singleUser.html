@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>GitHub Api using Angular JS</title>
+    <script src="js/angular.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="singleUser.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="MainCtrl">
+    <h1>GitHub Viewer</h1>
+
+    <!-- details of searched github users -->
+    <div>
+      {{error}}
+    </div>
+    <div>
+      {{user.name}}
+    </div>
+    <div>
+      {{user.location}}
+    </div>
+    <div>
+      <img ng-src="{{user.avatar_url}}" alt="{{user.name}}">
+    </div>
+    <!-- ends details of searched github users -->
+  </body>
+</html>
